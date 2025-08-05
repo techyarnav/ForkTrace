@@ -1,0 +1,65 @@
+{
+  "name": "fork-trace",
+  "version": "1.0.1",
+  "description": "Replay Ethereum mainnet transactions using Anvil with AI-powered analysis",
+  "main": "src/index.js",
+  "bin": {
+    "fork-trace": "./bin/fork-trace.js"
+  },
+  "scripts": {
+    "start": "node bin/fork-trace.js",
+    "test": "jest --coverage",
+    "test:unit": "jest --testPathIgnorePatterns=tests/integration",
+    "test:integration": "NODE_ENV=test jest tests/integration --runInBand --forceExit",
+    "test:integration:debug": "NODE_ENV=test DEBUG=1 jest tests/integration --runInBand --detectOpenHandles --verbose",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "test:watch": "jest --watch --testPathIgnorePatterns=tests/integration",
+    "dev": "node --inspect bin/fork-trace.js",
+    "lint": "eslint src/ bin/ tests/",
+    "prepare": "mkdir -p exports/states exports/json exports/markdown"
+  },
+  "keywords": [
+    "ethereum",
+    "transaction",
+    "replay",
+    "anvil",
+    "blockchain",
+    "debug",
+    "trace",
+    "cli"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techyarnav/ForkTrace.git"
+  },
+  "homepage": "https://github.com/techyarnav/ForkTrace#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "ethers": "^6.15.0",
+    "inquirer": "^8.2.6",
+    "ora": "^6.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.1",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(inquirer)/)"
+    ]
+  }
+}

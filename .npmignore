@@ -1,0 +1,124 @@
+# .npmignore
+
+# Development files
+.git/
+.gitignore
+.eslintrc*
+.prettierrc*
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Test files
+tests/
+test/
+*.test.js
+*.spec.js
+coverage/
+.nyc_output/
+jest.config.js
+mocha.opts
+
+# Build and cache
+node_modules/
+.npm/
+.eslintcache
+.parcel-cache/
+.cache/
+dist/
+build/
+
+# Documentation (keep README.md)
+docs/
+*.md
+!README.md
+!CHANGELOG.md
+
+# Development scripts
+scripts/dev*
+scripts/test*
+dev-server.js
+webpack*.js
+rollup.config.js
+
+# Sample/example files
+examples/
+samples/
+demo/
+playground/
+
+# Generated exports and states (user data)
+exports/
+anvil-states/
+snapshots/
+*.json.bak
+
+# Debug and temp files
+debug-*.js
+temp-*.js
+test-*.js
+quick-*.js
+flow.txt
+.tmp/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+*.sublime-project
+*.sublime-workspace
+.vscode/settings.json
+
+# Environment files
+.env
+.env.local
+.env.test
+.env.production
+*.key
+
+# Logs and runtime
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+.lock-wscript
+
+# Package tarballs
+*.tgz
+fork-trace-*.tgz
+
+# CI/CD files
+.github/
+.travis.yml
+.circleci/
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Assets that shouldn't be in package
+assets/
+screenshots/
+images/
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.svg
+!src/assets/  # Keep source assets if needed
+
+# Backup files
+*.backup
+*.bak
+backup/
+
+
